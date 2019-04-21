@@ -6,6 +6,7 @@
     "@types/jest": "24.0.9",
     "@types/node": "11.10.5",
     "axios": "^0.18.0",
+    "mobx": "^5.9.4",
     "typescript": "3.4.4"
   },
   "scripts": {
@@ -29,6 +30,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-typescript": "^7.3.3"
