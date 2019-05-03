@@ -1,5 +1,6 @@
 import { IObservableArray, observable, action } from "mobx";
 import { getLogEntries, addLogEntry } from "./apiCaller";
+import remoteDev from "mobx-remotedev";
 
 const DEFAULT_NUMBER_OF_SETS = 3;
 const DEFAULT_NUMBER_OF_REPS = 5;
@@ -160,3 +161,5 @@ export class MainStore {
       .finally(() => this.fetchLogEntries());
   };
 }
+
+export default remoteDev(MainStore);

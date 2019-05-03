@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { MainStore } from "lift-log-core/lib/store";
+import RemoteDevMainStore from "lift-log-core/lib/store";
 
 const apiUrl = "http://localhost:5000/api";
-const store = new MainStore(apiUrl);
+const store = new RemoteDevMainStore(apiUrl);
 
 ReactDOM.render(<App store={store} />, document.getElementById("root"));
 
