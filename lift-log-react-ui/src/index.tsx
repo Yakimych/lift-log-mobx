@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import RemoteDevMainStore from "lift-log-core/lib/store";
 
-const apiUrl = "http://localhost:5000/api";
+const apiUrl = "http://localhost:5000/api/liftlogs/demo";
 const store = new RemoteDevMainStore(apiUrl);
+store.fetchLogEntries();
 
 ReactDOM.render(<App store={store} />, document.getElementById("root"));
 

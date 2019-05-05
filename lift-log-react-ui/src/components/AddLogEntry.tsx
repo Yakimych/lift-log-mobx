@@ -1,13 +1,13 @@
 import * as React from "react";
-// import InputSetsDialog from "./InputSetsDialog";
+import InputSetsDialog from "./InputSetsDialog";
 import { canOpenDialog, MainStore } from "lift-log-core/lib/store";
 import { observer } from "mobx-react";
 
 const AddLogEntry = observer(({ store }: { store: MainStore }) => {
-  // const addEntryAndCloseDialog = () => {
-  //   store.closeDialog();
-  //   store.addEntry();
-  // };
+  const addEntryAndCloseDialog = () => {
+    store.closeDialog();
+    store.addEntry();
+  };
 
   return (
     <div className="add-log-entry">
@@ -32,12 +32,13 @@ const AddLogEntry = observer(({ store }: { store: MainStore }) => {
           Input sets
         </button>
       </div>
-      {/* {dialogIsOpen && (
+      {store.dialogIsOpen && (
         <InputSetsDialog
-          onClose={closeDialog}
+          onClose={store.closeDialog}
           onConfirm={addEntryAndCloseDialog}
+          store={store}
         />
-      )} */}
+      )}
     </div>
   );
 });
